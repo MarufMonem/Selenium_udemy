@@ -15,6 +15,7 @@ public class assignment3 {
 		System.setProperty("webdriver.chrome.driver", "X:\\Self improvement\\Selenium Udemy\\driver\\103.0.5060.53\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
+//		Explicit wait
 		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(5));
 
 		driver.get("https://rahulshettyacademy.com/loginpagePractise/");
