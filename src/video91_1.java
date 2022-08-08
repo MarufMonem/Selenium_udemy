@@ -33,7 +33,7 @@ public class video91_1 {
 			String clickonlinkTab = Keys.chord(Keys.CONTROL, Keys.ENTER);
 			
 			columnDriver.findElements(By.tagName("a")).get(i).sendKeys(clickonlinkTab);
-			Thread.sleep(5000);
+			Thread.sleep(2000);
 		}
 		
 //		Go to each and every tab
