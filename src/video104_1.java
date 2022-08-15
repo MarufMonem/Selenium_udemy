@@ -10,7 +10,7 @@ public class video104_1 {
 		System.setProperty("webdriver.chrome.driver", "X:\\Self improvement\\Selenium Udemy\\driver\\103.0.5060.53\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver(opt);
 		driver.get("https://expired.badssl.com/");
-		System.out.println(driver.getTitle());
+		System.out.println("The title is: " + driver.getTitle());
 
 	}
 
