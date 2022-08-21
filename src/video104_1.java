@@ -11,6 +11,8 @@ public class video104_1 {
 		WebDriver driver = new ChromeDriver(opt);
 		driver.get("https://expired.badssl.com/");
 		System.out.println("The title is: " + driver.getTitle());
+		
+		
 
 	}
 
