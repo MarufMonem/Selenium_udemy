@@ -43,10 +43,8 @@ public class video115_1 {
 		Long c = names.stream().filter(s-> s.startsWith("A")).count();
 		System.out.println(c);
 	}
-
-	public static void main(String argsp[]) {
-//		streamFilter();
-
+	
+	public static void multipleFilters() {
 		long d = Stream.of("Arum", "Sarath", "Rahim", "Asish").filter(s-> 
 		{
 			return s.startsWith("A");
@@ -58,6 +56,12 @@ public class video115_1 {
 						).count(); 
 		
 		System.out.println(d);
+	}
+
+	public static void main(String argsp[]) {
+//		streamFilter();
+
+
 	}
 	
 
