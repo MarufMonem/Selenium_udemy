@@ -2,6 +2,7 @@ package Java_Streams;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 import javax.xml.stream.StreamFilter;
 
@@ -43,8 +44,24 @@ public class video115_1 {
 		System.out.println(c);
 	}
 
-	public static void main(String argsp[]) {
-		streamFilter();
+	
+	public static void multipleFilters() {
+		long d = Stream.of("Arum", "Sarath", "Rahim", "Asish").filter(s-> 
+		{
+			return s.startsWith("A");
+		}
+				).filter(p->
+				{
+					return p.endsWith("m");
+				}
+						).count(); 
+		
+		System.out.println(d);
+	}
+
+	public static void main(String args[]) {
+//		streamFilter();
+
 	}
 	
 
