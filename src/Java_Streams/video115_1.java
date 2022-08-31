@@ -42,6 +42,9 @@ public class video115_1 {
 //		Filter method would filter based on the condtions provided
 		Long c = names.stream().filter(s-> s.startsWith("A")).count();
 		System.out.println(c);
+		
+//		names.stream().filter(s-> s.length()>4).forEach(s-> System.out.println(s));
+		names.stream().filter(s-> s.length()>4).limit(1).forEach(s-> System.out.println(s));
 	}
 
 	
@@ -58,9 +61,11 @@ public class video115_1 {
 		
 		System.out.println(d);
 	}
+	
 
 	public static void main(String args[]) {
-//		streamFilter();
+		streamFilter();
+//		multipleFilters();
 
 	}
 	
