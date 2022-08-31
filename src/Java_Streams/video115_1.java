@@ -48,6 +48,7 @@ public class video115_1 {
 	}
 
 	
+	@Test
 	public static void multipleFilters() {
 		long d = Stream.of("Arum", "Sarath", "Rahim", "Asish").filter(s-> 
 		{
@@ -61,10 +62,18 @@ public class video115_1 {
 		
 		System.out.println(d);
 	}
+	@Test
+	public static void streamMap(){
+//		print names with last letter h
+		Stream.of("Arum", "Sarath", "Rahim", "Asish")
+				.filter(s -> s.endsWith( "h"))
+				.map(s -> s.toUpperCase())
+				.forEach(s -> System.out.println(s));
+	}
 	
 
 	public static void main(String args[]) {
-		streamFilter();
+//		streamFilter();
 //		multipleFilters();
 
 	}
