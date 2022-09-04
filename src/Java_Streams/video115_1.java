@@ -3,6 +3,7 @@ package Java_Streams;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import javax.xml.stream.StreamFilter;
@@ -80,7 +81,7 @@ public class video115_1 {
 				.sorted().map(s -> s.toUpperCase())
 				.forEach(s -> System.out.println(s));
 	}
-//Mergingg to lists
+//Merging streams
 	@Test
 	public static void mergingStreams(){
 		String a1[] = {"Azrum", "Sarath", "Rahim", "Asish"};
@@ -92,7 +93,13 @@ public class video115_1 {
 		System.out.println(flag);
 		Assert.assertTrue(flag);
 	}
-
+	@Test
+	public static void streamCollect(){
+		List<String> newList =  Stream.of("Azrum", "Sarath", "Rahim", "Asish")
+				.map(s -> s.toUpperCase()).collect(Collectors.toList());
+//		Print the first result
+		System.out.println(newList.get(0));
+	}
 	
 
 }
