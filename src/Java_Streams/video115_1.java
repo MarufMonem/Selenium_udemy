@@ -100,6 +100,15 @@ public class video115_1 {
 //		Print the first result
 		System.out.println(newList.get(0));
 	}
+	@Test
+	public static void uniqueValues(){
+	Integer numbers[] = {3,2,2,7,5,1,9,7};
+	Stream<Integer> valuesStream = Arrays.stream(numbers);
+	valuesStream.distinct().sorted().forEach(s -> System.out.println(s));
+
+	List <Integer> listValues = Arrays.stream(numbers).distinct().sorted().collect(Collectors.toList());
+		System.out.println("3rd value: " + listValues.get(2));
+	}
 	
 
 }
