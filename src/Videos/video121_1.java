@@ -12,8 +12,15 @@ public class video121_1 {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://rahulshettyacademy.com/angularpractice/");
+
+//        Above
         WebElement nameEditBox = driver.findElement(By.cssSelector("[name='name']"));
         String output = driver.findElement(with(By.tagName("label")).above(nameEditBox)).getText();
         System.out.println(output);
+
+//        Below
+        WebElement dateOfBirthLabel = driver.findElement(By.cssSelector("label[for='dateofBirth']"));
+        driver.findElement(with(By.tagName("input")).below(dateOfBirthLabel)).click();
+//        System.out.println(output);
     }
 }
