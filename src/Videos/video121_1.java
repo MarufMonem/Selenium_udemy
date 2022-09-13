@@ -22,9 +22,8 @@ public class video121_1 {
 //        Below
         WebElement dateOfBirthLabel = driver.findElement(By.cssSelector("label[for='dateofBirth']"));
         driver.findElement(with(By.tagName("input")).below(dateOfBirthLabel)).click();
-//        System.out.println(output);
 
-//        :eft of
+//        Left of
         WebElement checkBoxInfo = driver.findElement(By.cssSelector("label[for='exampleCheck1']"));
         driver.findElement(with(By.tagName("input")).toLeftOf(checkBoxInfo)).click();
 
