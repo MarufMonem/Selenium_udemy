@@ -1,16 +1,17 @@
 package Videos;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WindowType;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.Set;
 
 public class video124_1 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.get("https://rahulshettyacademy.com/angularpractice/");
@@ -30,7 +31,12 @@ public class video124_1 {
 
 //        Switch to parent
         driver.switchTo().window(parentID);
-        driver.findElement(By.name("name")).sendKeys(courseTitle);
+        WebElement nameField = driver.findElement(By.name("name"));
+        nameField.sendKeys(courseTitle);
+//        Captures only the name element
+        File filename = nameField.getScreenshotAs(OutputType.FILE);
+//        Convert the file to a png format
+        FileUtils.copyFile(filename, new File(("name_field.png")));
 //        driver.quit();
 
     }
