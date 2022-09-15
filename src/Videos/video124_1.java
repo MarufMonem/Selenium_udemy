@@ -37,7 +37,11 @@ public class video124_1 {
         File filename = nameField.getScreenshotAs(OutputType.FILE);
 //        Convert the file to a png format
         FileUtils.copyFile(filename, new File(("name_field.png")));
-//        driver.quit();
+
+//        Get height and width
+        System.out.println(nameField.getRect().getDimension().getHeight());
+        System.out.println(nameField.getRect().getDimension().getWidth());
+        driver.quit();
 
     }
 }
